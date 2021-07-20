@@ -1,0 +1,15 @@
+ id |        name        | is_active | start_date |  end_date  
+----+--------------------+-----------+------------+------------
+  1 | Helmer Rodriguez   | t         | 2018-02-12 | 
+  2 | Rosalyn Raynor     | t         | 2018-02-12 | 
+  3 | Roberto Towne      | f         | 2018-02-12 | 2018-08-11
+  4 | Waylon Boehm       | t         | 2018-03-12 | 
+  5 | Georgiana Fahey    | f         | 2018-03-13 | 2018-08-12
+  6 | Cheyanne Powlowski | t         | 2018-04-09 | 
+  7 | Talon Gottlieb     | f         | 2018-04-10 | 2018-09-08
+  8 | Jadyn Bosco        | t         | 2018-06-04 | 
+  9 | Adam Romaguera     | t         | 2018-09-24 | 
+ 10 | Alessia Zemlak     | t         | 2018-09-25 | 
+ 11 | Preston Auer       | t         | 2018-11-19 | 
+(11 rows)
+
