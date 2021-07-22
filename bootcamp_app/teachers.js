@@ -14,15 +14,17 @@ pool.connect().then(() => {
 .catch(err => {
   console.log(err)
 });
-
-pool.query(`
+const queryString = `
 SELECT DISTINCT teachers.name AS teacher, cohorts.name AS cohort
 FROM teachers
 JOIN assistance_requests on teachers.id = teacher_id
 JOIN students on students.id = student_id
 JOIN cohorts on cohorts.id = cohort_id
-WHERE cohorts.name = '${args[0]}'
-ORDER BY teachers.name;`)
+WHERE cohorts.name = $1
+ORDER BY teachers.name;`
+const cohortName = `${args[0]}`; // does this need to be stored in an array variable like in students.js?
+
+pool.query(queryString, cohortName)
 .then(res => {
   res.rows.forEach(row => {
     console.log(`${row.cohort}: ${row.teacher}`)
